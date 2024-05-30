@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
+" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="main  overflow-auto">
+        <div class="header w-75 mx-auto  text-center py-5">
+            <h1>Bookmarker</h1>
+        </div>
+        <div class="line container mx-auto  mt-2 pt-4">
+            <h2 class="mb-5"><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites <i
+                    class="fa-solid fa-bookmark"></i> </h2>
+            <div class="form">
+                <div class="mb-3">
+                    <label for="SiteName" class="my-2"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                    <input oninput="validate(this)" type="text" class=" form-control" id="SiteName" name="Site Name"
+                        placeholder="Bookmark Name">
+                </div>
+                <div class="mb-3">
+                    <label for="SiteURL" class="my-2"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input oninput="validate(this)" type="url" class="form-control" id="SiteURL" name="Site URL"
+                        placeholder="Website URL">
+
+                </div>
+                <div class="mb-3 text-center">
+                    <button name="submit" onclick="getvalue()" class="btn  px-5" id="submit">submit</button>
+                </div>
+            </div>
+        </div>
+        <table class="container text-center mt-5 mb-3 bg-light">
+            <tr>
+                <thead >
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+                <tbody id="display"></tbody>
+            </tr>
+
+        </table>
+    </main>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
+"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
